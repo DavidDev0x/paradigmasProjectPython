@@ -1,3 +1,11 @@
+from pathlib import Path
+import sys
+
+if __package__ is None or __package__ == "":
+    project_root = Path(__file__).resolve().parents[3]
+    if str(project_root) not in sys.path:
+        sys.path.insert(0, str(project_root))
+
 from le2.plp.expressions2.programa import Programa
 from le2.plp.expressions2.declaration.dec_variavel import DecVariavel
 from le2.plp.expressions2.expression import ExpDeclaracao, ExpSoma, Id, ValorInteiro
@@ -24,6 +32,7 @@ class Exemplo3:
 
 
 if __name__ == "__main__":
-    tipo_valido, resultado = Exemplo3.executar()
-    print(f"Tipo valido: {tipo_valido}")
-    print(f"Resultado: {resultado}")
+    programa = Exemplo3.criar_programa()
+    print(f"Expressao: {programa.get_expressao()}")
+    print(f"Tipo valido: {programa.checa_tipo()}")
+    print(f"Resultado: {programa.executar()}")

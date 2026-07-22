@@ -81,3 +81,8 @@ class ExpDeclaracao(Expressao):
             return self._expressao.get_tipo(ambiente)
         finally:
             ambiente.restaura()
+
+    def __str__(self) -> str:
+        declaracoes = "; ".join(str(dec) for dec in self._seq_dec_variavel)
+        return f"let {declaracoes} in {self._expressao}"
+

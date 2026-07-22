@@ -1,0 +1,27 @@
+<programa> ::= <comando>
+<comando> ::= <comando_simples> ";" <comando> | <comando_simples>
+<comando_simples> ::= "skip"
+                    | <id> ":=" <expressao>
+                    | "read" "(" <id> ")"
+                    | "write" "(" <expressao> ")"
+                    | "if" <expressao> "then" <comando> "else" <comando>
+                    | "while" <expressao> "do" <comando>
+                    | "{" <declaracao> ";" <comando> "}"
+                    | "call" <id> "(" <lista_expressoes> ")"
+                    | "(" <comando> ")"
+<declaracao> ::= <declaracao_simples> "," <declaracao> | <declaracao_simples>
+<declaracao_simples> ::= "var" <id> "=" <expressao>
+                       | "proc" <id> "(" <parametros_formais> ")" "{" <comando> "}"
+<parametros_formais> ::= [ <tipo> <id> { "," <tipo> <id> } ]
+<tipo> ::= "int" | "boolean" | "string"
+<lista_expressoes> ::= [ <expressao> { "," <expressao> } ]
+<expressao> ::= <expressao> "or" <expressao>
+              | <expressao> "and" <expressao>
+              | <expressao> "==" <expressao>
+              | <expressao> "++" <expressao>
+              | <expressao> "+" <expressao>
+              | <expressao> "-" <expressao>
+              | "-" <expressao>
+              | "not" <expressao>
+              | "length" <expressao>
+              | <id> | <inteiro> | <booleano> | <string> | "(" <expressao> ")"

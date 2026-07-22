@@ -16,3 +16,6 @@ class DecVariavel:
 
     def get_expressao(self) -> Expressao:
         return self._expressao
+
+    def __str__(self) -> str:
+        return f"var {self._id} = {self._expressao}"

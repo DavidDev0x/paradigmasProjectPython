@@ -1,0 +1,2 @@
+class ErroTipoEntradaException(Exception):
+    pass

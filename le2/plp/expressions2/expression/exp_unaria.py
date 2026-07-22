@@ -21,6 +21,11 @@ class ExpUnaria(Expressao):
     def get_operador(self) -> str:
         return self._operador
 
+    def __str__(self) -> str:
+        if self._operador == "length":
+            return f"length({self._exp})"
+        return f"{self._operador}{self._exp}"
+
     def checa_tipo(self, amb: AmbienteCompilacao) -> bool:
         return self.get_exp().checa_tipo(amb) and self.checa_tipo_elemento_terminal(amb)
 

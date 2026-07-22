@@ -1,0 +1,2 @@
+class ErroSintatico(ValueError):
+    pass

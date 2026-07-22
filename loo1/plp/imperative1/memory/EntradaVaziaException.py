@@ -1,0 +1,2 @@
+class EntradaVaziaException(Exception):
+    pass

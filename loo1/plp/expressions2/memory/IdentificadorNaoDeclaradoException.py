@@ -1,0 +1,2 @@
+class IdentificadorNaoDeclaradoException(RuntimeError):
+    pass
