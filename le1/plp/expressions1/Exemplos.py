@@ -1,5 +1,15 @@
 from __future__ import annotations
 
+# Permite executar este arquivo diretamente na IDE sem instalar o pacote.
+# Ex.: clicar em Run no PyCharm/VS Code ou usar: python le1/plp/expressions1/Exemplos.py
+import sys
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+
 from typing import Any
 
 from le1.plp.expressions1 import Programa
