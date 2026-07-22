@@ -6,6 +6,16 @@ if __name__ == "__main__" and __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
 
 from loo1.plp.orientadaObjetos1.Programa import Programa
+from loo1.plp.expressions2.memory.VariavelJaDeclaradaException import VariavelJaDeclaradaException
+from loo1.plp.expressions2.memory.VariavelNaoDeclaradaException import VariavelNaoDeclaradaException
+from loo1.plp.orientadaObjetos1.excecao.declaracao.ClasseJaDeclaradaException import ClasseJaDeclaradaException
+from loo1.plp.orientadaObjetos1.excecao.declaracao.ClasseNaoDeclaradaException import ClasseNaoDeclaradaException
+from loo1.plp.orientadaObjetos1.excecao.declaracao.ObjetoJaDeclaradoException import ObjetoJaDeclaradoException
+from loo1.plp.orientadaObjetos1.excecao.declaracao.ObjetoNaoDeclaradoException import ObjetoNaoDeclaradoException
+from loo1.plp.orientadaObjetos1.excecao.declaracao.ProcedimentoJaDeclaradoException import ProcedimentoJaDeclaradoException
+from loo1.plp.orientadaObjetos1.excecao.declaracao.ProcedimentoNaoDeclaradoException import ProcedimentoNaoDeclaradoException
+from loo1.plp.orientadaObjetos1.excecao.execucao.EntradaInvalidaException import EntradaInvalidaException
+from loo1.plp.orientadaObjetos1.excecao.execucao.EntradaNaoFornecidaException import EntradaNaoFornecidaException
 from loo1.plp.orientadaObjetos1.comando.Atribuicao import Atribuicao
 from loo1.plp.orientadaObjetos1.comando.ChamadaMetodo import ChamadaMetodo
 from loo1.plp.orientadaObjetos1.comando.ComDeclaracao import ComDeclaracao
@@ -146,14 +156,44 @@ class Exemplo4:
         )
         return Programa(declaracao_classe, comando_principal)
 
+    @staticmethod
+    def tratar(tipo: str, erro: Exception) -> None:
+        import sys
+
+        print(f"{tipo}: {erro}", file=sys.stderr)
+
     def executar(self):
         programa = self.criar_programa()
-        if not programa.checa_tipo(ContextoCompilacaoOO1(ListaValor())):
-            raise TypeError("O Exemplo4 não está bem tipado.")
-        contexto = ContextoExecucaoOO1(ListaValor())
-        contexto.get_ref()
-        return programa.executar(contexto)
 
+        try:
+            bem_tipado = programa.checa_tipo(
+                ContextoCompilacaoOO1(ListaValor())
+            )
+
+            if bem_tipado:
+                contexto = ContextoExecucaoOO1(ListaValor())
+                contexto.get_ref()
+                return programa.executar(contexto)
+        except VariavelNaoDeclaradaException as erro:
+            self.tratar("VariavelNaoDeclaradaException", erro)
+        except VariavelJaDeclaradaException as erro:
+            self.tratar("VariavelJaDeclaradaException", erro)
+        except ObjetoNaoDeclaradoException as erro:
+            self.tratar("ObjetoNaoDeclaradoException", erro)
+        except ObjetoJaDeclaradoException as erro:
+            self.tratar("ObjetoJaDeclaradoException", erro)
+        except ProcedimentoNaoDeclaradoException as erro:
+            self.tratar("ProcedimentoNaoDeclaradoException", erro)
+        except ProcedimentoJaDeclaradoException as erro:
+            self.tratar("ProcedimentoJaDeclaradoException", erro)
+        except ClasseNaoDeclaradaException as erro:
+            self.tratar("ClasseNaoDeclaradaException", erro)
+        except ClasseJaDeclaradaException as erro:
+            self.tratar("ClasseJaDeclaradaException", erro)
+        except EntradaNaoFornecidaException as erro:
+            self.tratar("EntradaNaoFornecidaException", erro)
+        except EntradaInvalidaException as erro:
+            self.tratar("EntradaInvalidaException", erro)
 
 if __name__ == "__main__":
     exemplo = Exemplo4()

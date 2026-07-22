@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ddf1c450-59eb-4942-96ba-cd92cd0a7d56" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/loo1/plp/orientadaObjetos1/Exemplo1.py" beforeDir="false" afterPath="$PROJECT_DIR$/loo1/plp/orientadaObjetos1/Exemplo1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loo1/plp/orientadaObjetos1/Exemplo2.py" beforeDir="false" afterPath="$PROJECT_DIR$/loo1/plp/orientadaObjetos1/Exemplo2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loo1/plp/orientadaObjetos1/Exemplo3.py" beforeDir="false" afterPath="$PROJECT_DIR$/loo1/plp/orientadaObjetos1/Exemplo3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loo1/plp/orientadaObjetos1/Exemplo4.py" beforeDir="false" afterPath="$PROJECT_DIR$/loo1/plp/orientadaObjetos1/Exemplo4.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="3GpnKyPkoDiaNRuQ0HuFqCzuReI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.Exemplo1.executor": "Run",
+    "Python.Exemplo2.executor": "Run",
+    "Python.Exemplo3.executor": "Run",
+    "Python.Exemplo4.executor": "Run",
+    "Python.Exemplo5.executor": "Run",
+    "Python.Exemplos.executor": "Run",
+    "Python.executar_exemplo.executor": "Run",
+    "Python.executar_exemplos.executor": "Run",
+    "Python.exemplo1.executor": "Run",
+    "Python.exemplo2.executor": "Run",
+    "Python.exemplo3.executor": "Run",
+    "Python.exemplo4.executor": "Run",
+    "Python.exemplo5.executor": "Run",
+    "Python.exemplos.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-890ed5b35930-d9c5bdb153f4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.23774.444" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ddf1c450-59eb-4942-96ba-cd92cd0a7d56" name="Changes" comment="" />
+      <created>1784677318186</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1784677318186</updated>
+    </task>
+    <servers />
+  </component>
+</project>
